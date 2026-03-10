@@ -3,7 +3,14 @@ import { identifyService } from "../services/identify.service";
 
 export const identifyContact = async (req: Request, res: Response) => {
   try {
+
     const { email, phoneNumber } = req.body;
+
+    if (!email && !phoneNumber) {
+      return res.status(400).json({
+        error: "Either email or phoneNumber must be provided"
+      });
+    }
 
     const result = await identifyService(email, phoneNumber);
 

@@ -7,4 +7,10 @@ app.use(express.json());
 
 app.use("/", identifyRoutes);
 
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "BiteSpeed Identity Reconciliation API is running"
+  });
+});
+
 export default app;
