@@ -39,29 +39,31 @@ Response
 }
 ```
 
-Identity Reconciliation Logic
+## Identity Reconciliation Logic
 
-A customer may have multiple contact records.
+* A customer may have multiple contact records.
 
-The oldest contact is considered the primary contact.
+* The oldest contact is considered the primary contact.
 
-New contacts with shared email or phone become secondary contacts.
+* New contacts with shared email or phone become secondary contacts.
 
-If two primary contacts become linked, the newer one is converted to secondary.
+* If two primary contacts become linked, the newer one is converted to secondary.
 
-Setup Instructions
-Install dependencies
-npm install
-Configure environment variables
+**Setup Instructions:**
 
-Create .env from .env.example.
+1. Install dependencies:
+**npm install**
 
-Run the server
-npm run dev
+2. Configure environment variables:
+**Create .env from .env.example.**
+
+3. Run the server:
+**npm run dev**
 
 Server runs at:
 
-http://localhost:3000
+**http://localhost:3000**
+
 Test API
 
 Example request:
@@ -76,7 +78,10 @@ POST /identify
 
 The API is deployed on **Render**.
 
-Live endpoint:
+**GitHub Repository**:
+https://github.com/santhosh1188/bitespeed-identity-reconciliation
+
+Live endpoint(Render):
 (in postman)
 POST https://bitespeed-identity-reconciliation-rugi.onrender.com/identify
 
