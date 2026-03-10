@@ -21,8 +21,10 @@ POST /identify
   "email": "string?",
   "phoneNumber": "string?"
 }
+```
 
 Response
+```json
 {
   "contact": {
     "primaryContatctId": 1,
@@ -35,6 +37,7 @@ Response
     "secondaryContactIds": []
   }
 }
+```
 
 Identity Reconciliation Logic
 
@@ -69,6 +72,13 @@ POST /identify
   "phoneNumber": "999999"
 }
 
+## Deployment
+
+The API is deployed on **Render**.
+
+Live endpoint:
+(in postman)
+POST https://bitespeed-identity-reconciliation-rugi.onrender.com/identify
 
 Author:
 Santhosh Kumar Penupotula
